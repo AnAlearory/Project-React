@@ -48,7 +48,7 @@ module.exports ={
             .where('id', id)
             .select('ongs_id')
             .first();
-        if(incidents.ongs_id != ongs_id){
+        if(incidents.ongs_id !== ongs_id){
             return response.status(401).json({ error: 'Operation not permited.' });
         }
 
